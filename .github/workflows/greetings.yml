@@ -1,0 +1,16 @@
+name: Greetings new Github community contributor!
+
+on: [issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: read
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "TODO: Link to issues hints (informative, descriptive, only reproducible bugs please, and free of personal opinionation that is irrelevant to the software task at hand) and remember community rules / standards apply to this virtual environment: be respectful and try to omit unnecessary obscenities in your posts."
+        pr-message: "Ditto - same first post rules and warnings as displayed for new issues threads"
